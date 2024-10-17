@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "familias",
+  "info": {
+    "singularName": "familia",
+    "pluralName": "familias",
+    "displayName": "aniversariantes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    }
+  }
+}

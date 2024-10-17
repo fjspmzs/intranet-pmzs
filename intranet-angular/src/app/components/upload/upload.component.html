@@ -1,0 +1,12 @@
+<div class="justify-content-center">
+  <h2>Material carga para .csv</h2>
+  <p>envie o PDF gerado pelo SISCOFIS da sua relação carga DETALHADA</p>
+
+    <div class="br-divider py-2 my-2"></div>
+<div class="br-upload d-flex row justify-content-center my-4">
+  <label class="upload-label" for="single-file"><span></span></label>
+  <input class="upload-input" id="single-file" type="file" (change)="onFileSelected($event)" accept=".pdf" aria-hidden="null" aria-label="enviar arquivo"/>
+  <div class="upload-list"></div>
+</div>
+</div>
+<button class="br-button primary active" (click)="onUpload()" [disabled]="!selectedFile">Baixar material-carga.csv</button>

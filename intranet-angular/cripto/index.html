@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigaCripto</title>
+    <link rel="icon" type="image/png" href="com.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gigacripto.css">
+</head>
+<body>
+    <header>
+    </header>
+
+    <section id="quadro">
+        <h1 style="font-size: 30pt;"><strong>GIGA CRIPTO</strong></h1>
+        <div>
+            <p>Chave simples</p>
+            <input type="button" id="decrypt_simples" value="🔑" onclick="decrypt_simples()" style="border-radius: 100%; background-color: black;">
+            <input type="text" placeholder="mensagem" id="msg_simples_box" style="width: 300px; border-radius: 10px;">
+            <input type="text" placeholder="chave simples" id="chave_simples_box" style="width: 240px; border-radius: 10px;">
+            <input type="button" id="crypt_simples" value="🔒" onclick="crypt_simples()" style="border-radius: 100%; background-color: black;">
+        </div>
+        <div style="padding: 20px;">
+            <p>Chave dupla</p>
+            <input type="button" id="decrypt_dupla" value="🔑" onclick="decrypt_dupla()" style="border-radius: 100%; background-color: black;">
+            <input type="text" placeholder="mensagem" id="msg_dupla_box" style="width: 300px; border-radius: 10px;">
+            <input type="text" placeholder="chave horizontal" id="chave_horizontal_box" style="width: 112px; border-radius: 10px;">
+            <input type="text" placeholder="chave vertical" id="chave_vertical_box" style="width: 112px; border-radius: 10px;">
+            <input type="button" id="crypt_dupla" value="🔒" onclick="crypt_dupla()" style="border-radius: 100%; background-color: black;">
+        </div>
+        <div>
+            <section id="res">
+                <div id="final" style="word-wrap: break-word; overflow-wrap: break-word;">
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Asp Luis Gustavo // Asp Estevam</p>
+        <p>Os barra 23</p>
+    </footer>
+
+    <script src="gigacripto.js"></script>
+</body>
+</html>
