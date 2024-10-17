@@ -42,7 +42,7 @@ export class ModalComponent implements AfterViewInit {
 
           return birthdate.getMonth() === currentMonth;
         });
-        this.hasBirthdayToday = this.data.some(item => this.isBirthdayToday(item.attributes['birthdate']));
+        this.hasBirthdayToday = this.data.some(item => this.isBirthdayToday(item.attributes['data_aniversario']));
 
         // Ordena pela data de aniversário, priorizando o aniversário de hoje
         this.data.sort((a, b) => {
