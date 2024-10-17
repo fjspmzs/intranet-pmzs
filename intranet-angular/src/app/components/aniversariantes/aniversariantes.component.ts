@@ -32,18 +32,18 @@ export class AniversariantesComponent implements OnInit {
 
         // Filtra os dados para exibir apenas os aniversariantes do mês corrente
         this.data = response.filter((item: any) => {
-          const birthdate = new Date(item.attributes['birthdate']);
+          const birthdate = new Date(item.attributes['data_aniversario']);
 
           return birthdate.getMonth() === currentMonth;
         });
 
         // Ordena pela data de aniversário, priorizando o aniversário de hoje
         this.data.sort((a, b) => {
-          const birthdateA = new Date(a.attributes['birthdate']);
-          const birthdateB = new Date(b.attributes['birthdate']);
+          const birthdateA = new Date(a.attributes['data_aniversario']);
+          const birthdateB = new Date(b.attributes['data_aniversario']);
 
-          const isTodayA = this.isBirthdayToday(a.attributes['birthdate']);
-          const isTodayB = this.isBirthdayToday(b.attributes['birthdate']);
+          const isTodayA = this.isBirthdayToday(a.attributes['data_aniversario']);
+          const isTodayB = this.isBirthdayToday(b.attributes['data_aniversario']);
 
           if (isTodayA && !isTodayB) {
             return -1; // Aniversário de hoje vem primeiro
