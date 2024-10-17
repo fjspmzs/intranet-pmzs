@@ -1,7 +1,7 @@
 <div class="row">
   <figure *ngFor="let item of displayedNews" class="snip1527">
     <div class="image">
-      <img [src]="'http://10.56.19.154' + item.attributes.cover.data.attributes.formats.small.url" alt="News Image" />
+      <img [src]="'http://localhost:8080' + item.attributes.cover.data.attributes.formats.small.url" alt="News Image" />
     </div>
     <figcaption>
       <div class="date">
