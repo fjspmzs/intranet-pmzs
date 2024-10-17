@@ -1,7 +1,7 @@
 import { Component, ElementRef } from '@angular/core'
 
 import BRHeader from '@govbr-ds/core/dist/components/header/header'
-import { environment } from '../../../environments/environment.prod'
+import { environment } from '../../../environments/environment'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 
@@ -13,8 +13,8 @@ import { RouterModule } from '@angular/router'
   styleUrl: './header.component.scss'
 })
 export class BrHeaderComponent {
-  public title = '9º Batalhão de Comunicações e Guerra Eletrônica'
-  public subtitle = 'Batalhão Major Rondon'
+  public title = 'Nome da sua OM (componente header)'
+  public subtitle = 'Denominação Histórica'
   public signature: string = 'Ministério da Defesa'
   instance: any // Instância do componente angular
 

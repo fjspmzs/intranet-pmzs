@@ -3,7 +3,7 @@ export const environment = {
 
   EXPRESS_FORM: 'http://10.56.19.158/feedback',
 
-  ASSETS_PICS: 'http://10.56.19.152/assets/pics/',
+  ASSETS_PICS: 'http://localhost:3000/assets/pics/',
   ASSETS_WEATHER: 'http://10.56.19.152/weather',
   ASSETS_SVG: 'http://10.56.19.152/assets/svg/',
   ASSETS_MD: 'http://10.56.19.152/assets/markdown/',
