@@ -8,7 +8,7 @@
         <div class="br-modal-body">
           @if (!isLoading()) {
             @for (item of data; track $index) {
-              @if (isBirthdayToday(item.attributes['birthdate'])) {
+              @if (isBirthdayToday(item.attributes['data_aniversario'])) {
                   <li>{{item.attributes['nome']}}</li>
               }
           }
