@@ -5,7 +5,6 @@ import { AniversariantesComponent } from '../../components/aniversariantes/anive
 import { ButtonBalloonComponent } from '../../components/button-balloon/button-balloon.component';
 import { CalendarioComponent } from '../../components/calendario/calendario.component';
 import { BrCarousel } from '../../components/carousel/carousel.component';
-import { MessageComponent } from '../../components/message/message.component';
 import { NewsComponent } from '../../components/news/news.component';
 import { QtsQtfmComponent } from '../../components/qts-qtfm/qts-qtfm.component';
 import { InstagramComponent } from "../../components/instagram/instagram.component";
@@ -23,7 +22,6 @@ import { WeatherComponent } from "../../components/weather/weather.component";
     ButtonBalloonComponent,
     CalendarioComponent,
     BrCarousel,
-    MessageComponent,
     NewsComponent,
     QtsQtfmComponent,
     InstagramComponent,

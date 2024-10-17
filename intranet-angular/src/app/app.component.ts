@@ -9,7 +9,7 @@ import { ModalComponent } from './components/modal/modal.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BrMenuComponent, BrHeaderComponent, PopUpComponent, BrFooterComponent],
+  imports: [RouterOutlet, BrMenuComponent, BrHeaderComponent, PopUpComponent, BrFooterComponent, ModalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
