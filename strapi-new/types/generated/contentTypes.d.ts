@@ -788,6 +788,37 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAniversarianteAniversariante extends Schema.CollectionType {
+  collectionName: 'aniversariantes';
+  info: {
+    singularName: 'aniversariante';
+    pluralName: 'aniversariantes';
+    displayName: 'Aniversariantes';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nome: Attribute.String;
+    data_aniversario: Attribute.Date;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aniversariante.aniversariante',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aniversariante.aniversariante',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAvisoAviso extends Schema.CollectionType {
   collectionName: 'avisos';
   info: {
@@ -811,38 +842,6 @@ export interface ApiAvisoAviso extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::aviso.aviso',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiFamiliaFamilia extends Schema.CollectionType {
-  collectionName: 'familias';
-  info: {
-    singularName: 'familia';
-    pluralName: 'familias';
-    displayName: 'aniversariantes';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    nome: Attribute.String;
-    birthdate: Attribute.Date;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::familia.familia',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::familia.familia',
       'oneToOne',
       'admin::user'
     > &
@@ -1045,8 +1044,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::aniversariante.aniversariante': ApiAniversarianteAniversariante;
       'api::aviso.aviso': ApiAvisoAviso;
-      'api::familia.familia': ApiFamiliaFamilia;
       'api::faq.faq': ApiFaqFaq;
       'api::galeria.galeria': ApiGaleriaGaleria;
       'api::noticia.noticia': ApiNoticiaNoticia;

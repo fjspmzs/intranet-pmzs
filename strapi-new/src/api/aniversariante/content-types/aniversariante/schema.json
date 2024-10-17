@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "familias",
+  "collectionName": "aniversariantes",
   "info": {
-    "singularName": "familia",
-    "pluralName": "familias",
-    "displayName": "aniversariantes",
-    "description": ""
+    "singularName": "aniversariante",
+    "pluralName": "aniversariantes",
+    "displayName": "Aniversariantes"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +14,7 @@
     "nome": {
       "type": "string"
     },
-    "birthdate": {
+    "data_aniversario": {
       "type": "date"
     }
   }
