@@ -1,5 +1,7 @@
 # Subir para produção! 🚀
 
+Para produção são necessários 3 servidores com seus IPs reservados, todos para serem usados na **porta 80**
+
 Servidores dockerizados:
 - Assets ✅
 - Angular ✅
