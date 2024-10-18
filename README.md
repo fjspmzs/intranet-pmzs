@@ -60,4 +60,21 @@ No caso ele irá consumir o `assets-server` e o `strapi`.
 
 # Rodar Strapi
 
-Para rodar o Strapi é necessário ter `node`. Acesse a pasta /strapi-new com `cd strapi-new`
+Para rodar o Strapi é necessário ter `node`. Acesse a pasta /strapi-new com `cd strapi-new`. Nela você precisa editar as variáveis de ambiente: 
+```
+cp .env.example .env
+```
+
+esse comando cria o arquivo `.env` necessário para iniciar o strapi sem problemas, nele contém o seguinte:
+```
+HOST=127.0.0.1
+PORT=8080
+APP_KEYS="toBeModified1,toBeModified2"
+API_TOKEN_SALT=tobemodified
+ADMIN_JWT_SECRET=tobemodified
+TRANSFER_TOKEN_SALT=tobemodified
+JWT_SECRET=tobemodified
+```
+
+no arquivo de exemplo, o HOST está setado para ser o `localhost`, mas no "valendo" você deve alterar para o IP do seu servidor.
+**A porta recomendada é a 80** para não haver problemas de Firewall dos CTA's e VPN.
