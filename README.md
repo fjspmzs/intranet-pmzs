@@ -254,3 +254,7 @@ export const environment = {
   CARGA_UPLOAD: 'http://10.56.19.152:5000/upload'
 }
 ```
+
+## Verifique mais a fundo como alterar o Angular
+
+[ANGULAR.md](./ANGULAR.md)
