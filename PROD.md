@@ -59,4 +59,8 @@ docker compose up -d
 
 ## Servidor Strapi
 
-Apenas modifique no arquivo `.env` da porta **1337 para 80**
+Apenas modifique no arquivo `.env` da porta **1337 para 80** e rode novamente o projeto:
+
+```
+npm run develop
+```
