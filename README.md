@@ -21,3 +21,16 @@ Devo começar dizendo sobre os recursos que serão possíveis subir com esse rep
 - Livro de saída da guarnição ✅
 - Arranchamento ❌
 - Sistema de combustível ❌
+
+## Requisitos de sistema
+
+- git [instalar git](https://git-scm.com/) | linux: `sudo apt install git`
+- docker [instalar docker](https://docs.docker.com/engine/install/)
+- node [instalar node](https://nodejs.org/en/download/package-manager)
+
+## Requisito de conhecimento
+
+- conhecimento básico em git e versionamento de código
+- conhecimento básico em docker
+- conhecimento básico em node
+- conhecimento básico de rede (DNS, protocolo HTTP, Proxy) 
