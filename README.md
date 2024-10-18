@@ -41,3 +41,9 @@ clonar repositório
 ```
 git clone https://github.com/nixoletas/intranet-govbr
 ```
+
+neste repositório você encontrará 3 pastas. 
+
+#### assets-server
+
+**assets-server** é a pasta que contém o servidor de assets que irá disponibilizar os ícones do [fontawesome](https://fontawesome.com/) e a fonte [Rawline](https://www.gov.br/saude/pt-br/centrais-de-conteudo/manual-de-marcas/brasil-sorridente/fontes-rawline/view) do padrão de Design do governo. Ele também irá fornecer outros recursos adicionais como previsão do tempo, suporte para chamados do Telegram, suporte para requisições externas, arquivos .md e arquivos de imagem (jpg, png, svg).
