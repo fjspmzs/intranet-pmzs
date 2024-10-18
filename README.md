@@ -65,7 +65,7 @@ cp .env.example .env
 ```
 
 esse comando cria o arquivo `.env` necessário para iniciar o strapi sem problemas, nele contém o seguinte:
-```
+```env
 HOST=127.0.0.1
 PORT=8080
 APP_KEYS="toBeModified1,toBeModified2"
@@ -121,7 +121,7 @@ cp .env.example .env
 ```
 
 esse comando cria o arquivo `.env` necessário para iniciar o strapi sem problemas, nele contém o seguinte:
-```
+```env
 PORT=3000
 BOT_ID=""
 CHAT_ID=
