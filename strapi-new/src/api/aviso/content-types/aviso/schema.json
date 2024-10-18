@@ -4,7 +4,8 @@
   "info": {
     "singularName": "aviso",
     "pluralName": "avisos",
-    "displayName": "aviso"
+    "displayName": "Aviso",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

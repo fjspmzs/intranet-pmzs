@@ -824,7 +824,8 @@ export interface ApiAvisoAviso extends Schema.CollectionType {
   info: {
     singularName: 'aviso';
     pluralName: 'avisos';
-    displayName: 'aviso';
+    displayName: 'Aviso';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -854,7 +855,7 @@ export interface ApiGaleriaGaleria extends Schema.CollectionType {
   info: {
     singularName: 'galeria';
     pluralName: 'galerias';
-    displayName: 'carrosel';
+    displayName: 'Carrosel';
     description: '';
   };
   options: {
@@ -887,7 +888,7 @@ export interface ApiNoticiaNoticia extends Schema.CollectionType {
   info: {
     singularName: 'noticia';
     pluralName: 'noticias';
-    displayName: 'noticia';
+    displayName: 'Noticia';
     description: '';
   };
   options: {
@@ -922,7 +923,7 @@ export interface ApiPopupPopup extends Schema.SingleType {
   info: {
     singularName: 'popup';
     pluralName: 'popups';
-    displayName: 'popup';
+    displayName: 'PopUp';
     description: '';
   };
   options: {
