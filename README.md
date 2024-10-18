@@ -32,13 +32,6 @@ Devo começar dizendo sobre os recursos que serão possíveis subir com esse rep
 - docker [instalar docker](https://docs.docker.com/engine/install/)
 - node [instalar node](https://nodejs.org/en/download/package-manager)
 
-## Requisito de conhecimento
-
-- conhecimento básico em git e versionamento de código
-- conhecimento básico em docker
-- conhecimento básico em node
-- conhecimento básico de rede (DNS, protocolo HTTP, Proxy)
-
 # Começando
 
 clonar repositório e acessar a pasta do projeto
