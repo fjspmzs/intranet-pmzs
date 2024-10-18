@@ -155,3 +155,27 @@ npm start
 ### Intranet pronta e acessível em [http://localhost:4200](http://localhost:4200) ✅ Porém...
 
 Fique atento para algumas variáveis e endereços IP!
+
+Primeiro, acesse a pasta /src e verifique o arquivo `index.html`, ele deve conter em seu corpo, referências aos IP's dos servidores de **Strapi** e **Assets**:
+
+```
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Intranet</title>
+    <link rel="icon" type="image/x-icon" href="http://localhost:3000/assets/pics/logo9bcom2.png" />
+    <link
+      rel="stylesheet"
+      href="http://localhost:3000/assets/rawline/rawline.css"
+      media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="http://localhost:3000/assets/font-awesome/css/all.min.css" media="print" onload="this.media='all'"/>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>
+```
