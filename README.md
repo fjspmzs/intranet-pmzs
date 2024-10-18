@@ -1,4 +1,4 @@
-<div align="center">
+![image](https://github.com/user-attachments/assets/8156b548-3218-4399-98b9-c1600320b46d)<div align="center">
 
 # Intranet GovBR (novo modelo)
 Com Angular & Strapi. Tutorial completo ⭐
@@ -85,7 +85,7 @@ npm run develop
 
 Após isso, poderá acessar seu servidor em: [http://localhost:8080](http://localhost:8080)
 
-Será solicitado a criação da conta de administrador
+### Crie a conta de administrador
 
 ![image](https://github.com/user-attachments/assets/caf7b2a9-2196-4f24-ba19-5fdde3a4f132)
 
@@ -101,4 +101,42 @@ Principais tipos de conteúdo:
 - noticia
 - popup
 
+### Altere as permissões de acesso da API
 
+Acessando "User & Permissions Plugin" e marcando "find" e "find one" dos Content-Types
+
+![image](https://github.com/user-attachments/assets/bd7f2eeb-2548-4e77-a8d7-4e107883def8)
+
+### Strapi configurado! ✅
+
+Pronto! Agora é só começar a criar as postagens, notícias, carrosel, e cadastro de aniversariantes.
+
+# Rodar Assets Server
+
+Para iniciar o servidor de assets é quase a mesma coisa do strapi. Acesse a pasta /assets-server com `cd assets-server`. Nela você precisa editar as variáveis de ambiente também: 
+```
+cp .env.example .env
+```
+
+esse comando cria o arquivo `.env` necessário para iniciar o strapi sem problemas, nele contém o seguinte:
+```
+PORT=3000
+BOT_ID=""
+CHAT_ID=
+SERVER_IP=127.0.0.1
+```
+
+A porta selecionada é 3000 mas para produção recomenda-se a 80, sempre para evitar bloqueios de VPN e Firewall.
+
+Ignore por enquanto o "BOT_ID" e "CHAT_ID", eles serão usados para a função de Chamados - STI. Será ensinado futuramente!
+
+### Instalar dependências e rodar projeto
+
+```
+npm install
+npm run dev
+```
+
+### Servidor de assets configurado ✅
+
+Pronto, seu servidor de assets deverá estar configurado e sua intranet pronta para consumir, tanto o Strapi quanto o Assets.
