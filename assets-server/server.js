@@ -128,7 +128,7 @@ async function fetchWeatherData() {
   try {
     const response = await axios.get(openMeteoUrl);
     cachedData = response.data;
-    console.log('Dados atualizados com sucesso!');
+    console.log('Dados do clima tempo atualizados com sucesso!');
   } catch (error) {
     console.error('Erro ao buscar dados:', error);
   }
