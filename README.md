@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8156b548-3218-4399-98b9-c1600320b46d)<div align="center">
+<div align="center">
 
 # Intranet GovBR (novo modelo)
 Com Angular & Strapi. Tutorial completo ⭐
