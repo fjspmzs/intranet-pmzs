@@ -76,5 +76,5 @@ TRANSFER_TOKEN_SALT=tobemodified
 JWT_SECRET=tobemodified
 ```
 
-no arquivo de exemplo, o HOST está setado para ser o `localhost`, mas no "valendo" você deve alterar para o IP do seu servidor.
+>no arquivo de exemplo, o HOST está setado para ser o `localhost`, mas no "valendo" você deve alterar para o IP do seu servidor.
 **A porta recomendada é a 80** para não haver problemas de Firewall dos CTA's e VPN.
