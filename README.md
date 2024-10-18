@@ -196,7 +196,7 @@ Como dito anteriormente, tente sempre rodar os 3 servidores em máquinas separad
 
 Exemplo de `environment.ts`:
 
-```
+```typescript
 export const environment = {
   production: false,
 
@@ -226,7 +226,7 @@ export const environment = {
 
 Exemplo de `environment.prod.ts`:
 
-```
+```typescript
 export const environment = {
   production: true,
 
