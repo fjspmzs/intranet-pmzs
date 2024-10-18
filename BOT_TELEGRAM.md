@@ -21,3 +21,11 @@ Precisamos de dois recursos do telegram:
 - ID do grupo
 - ID do bot
 ```
+
+### Insira esses 2 dados no `.env` do **assets-server**
+```env
+PORT=3000
+BOT_ID="7900241164:AAGwwpPhI6exampleiW4u-lsBaRb6qzXfFLg"
+CHAT_ID=-100245example
+SERVER_IP=127.0.0.1
+```
