@@ -9,9 +9,9 @@ Precisamos de dois recursos do telegram:
 
 1. Criar grupo onde o Bot será usado
 
-2. Obter o ID do grupo
+2. Obter o ID do grupo com o @GetChatID_IL_BOT
 
-3. Criar bot no Botfather
+3. Criar bot no @Botfather
 
 4. Obter ID do bot
 
