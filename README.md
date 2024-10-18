@@ -158,7 +158,7 @@ Fique atento para algumas variáveis e endereços IP!
 
 Primeiro, acesse a pasta /src e verifique o arquivo `index.html`, ele deve conter em seu corpo, referências aos IP's dos servidores de **Strapi** e **Assets**:
 
-```
+```html
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -179,3 +179,9 @@ Primeiro, acesse a pasta /src e verifique o arquivo `index.html`, ele deve conte
   </body>
 </html>
 ```
+
+Depois acesse as variáveis de ambiente em /environments: 
+
+PRODUÇÃO -> `environment.prod.ts` | DESENVOLVIMENTO -> `environment.ts`
+
+Tente manter as duas sempre cópias uma da outra para evitar confusão. Mas o ideal é ter o desenvolvimento na sua máquina local e quando seu código estiver legal, usar produção. O Angular usa automaticamente cada uma das variáveis conforme o método de rodar o projeto.
