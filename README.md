@@ -33,4 +33,9 @@ Devo começar dizendo sobre os recursos que serão possíveis subir com esse rep
 - conhecimento básico em git e versionamento de código
 - conhecimento básico em docker
 - conhecimento básico em node
-- conhecimento básico de rede (DNS, protocolo HTTP, Proxy) 
+- conhecimento básico de rede (DNS, protocolo HTTP, Proxy)
+
+# Começando
+
+clonar repositório
+`git clone https://github.com/nixoletas/intranet-govbr`
