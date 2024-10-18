@@ -34,7 +34,6 @@ import { CartilhasENormasComponent } from './pages/cartilhas-e-normas/cartilhas-
 import { NewsDetailComponent } from './components/news-detail/news-detail.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { Ciac2Component } from './pages/ciac2/ciac2.component';
-import { UploadComponent } from './components/upload/upload.component';
 import { OperacoesComponent } from './pages/operacoes/operacoes.component';
 import { PostagemDetalheComponent } from './pages/postagem-detalhe/postagem-detalhe.component';
 import { PopComponent } from './pages/pop/pop.component';
@@ -145,10 +144,6 @@ export const routes: Routes = [
     {
       path: 'ciac2',
       component: Ciac2Component
-    },
-    {
-      path: 'carga-upload',
-      component: UploadComponent
     },
     { path: 'sistemas-externos', component: SistemasExternosComponent },
     { path: 'cartilhas-e-normas', component: CartilhasENormasComponent },
