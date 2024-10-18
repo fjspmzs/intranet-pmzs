@@ -37,13 +37,27 @@ Devo começar dizendo sobre os recursos que serão possíveis subir com esse rep
 
 # Começando
 
-clonar repositório
+clonar repositório e acessar a pasta do projeto
 ```
 git clone https://github.com/nixoletas/intranet-govbr
+cd intranet-govbr
 ```
 
 neste repositório você encontrará 3 pastas. 
 
-### assets-server
+### 1. assets-server
 
 **assets-server** é a pasta que contém o servidor de assets que irá disponibilizar os ícones do [fontawesome](https://fontawesome.com/) e a fonte [Rawline](https://www.gov.br/saude/pt-br/centrais-de-conteudo/manual-de-marcas/brasil-sorridente/fontes-rawline/view) do padrão de Design do governo. Ele também irá fornecer outros recursos adicionais como previsão do tempo, suporte para chamados do Telegram, suporte para requisições externas, arquivos .md e arquivos de imagem (jpg, png, svg).
+
+### 2. intranet-angular
+
+**intranet-angular** é o nosso front-end feito em [Angular](https://angular.dev/) no modelo Single-Page Application que irá servir nosso HTML, CSS e Javascript, como todos seus componentes personalizáveis e consumo de API's externas.
+No caso ele irá consumir o `assets-server` e o `strapi`.
+
+### 2. strapi-new
+
+**strapi** é o nosso Headless-CMS [ver página](https://strapi.io/). Ele irá nos fornecer uma maneira fácil de manipular as publicações dos diversos componentes que sofrem alterações frequentes (carrosel, aniversariantes, notícias, avisos, etc).
+
+# Rodar Strapi
+
+Para rodar o Strapi é necessário ter `node`. Acesse a pasta /strapi-new com `cd strapi-new`
