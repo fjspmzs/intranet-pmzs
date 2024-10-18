@@ -178,7 +178,7 @@ export class LinksService {
 
   userHelp: Link[] = [
     { href: 'https://acesso.6cta.eb.mil.br/otp.html', title: 'Trocar senha VPN', target: '_blank', icon: 'fa fa-key' },
-    { href: '/sti/chamado', title: 'Abrir chamado simplificado - STI', icon: 'fa fa-headset' },
+    { href: '/sti/chamado', title: 'Chamado - STI', icon: 'fa fa-headset' },
     { href: 'http://docs.9bcomge.eb.mil.br/', title: 'Como acessar VPN', target: '_blank', icon: 'fa fa-question' },
     { href: 'http://docs.9bcomge.eb.mil.br/', title: 'Como acessar Internet', target: '_blank', icon: 'fa fa-question' },
     { href: 'http://intranet.dct.eb.mil.br/legislacao-tic', title: 'Legislação de TIC', target: '_blank', icon: 'fa fa-book' },
