@@ -13,9 +13,7 @@ interface Link {
 })
 export class LinksService {
   mainLinks: Link[] = [
-    { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistema Interno', target: '_blank', icon: 'fa fa-id-card' },
     { href: 'http://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
-    { href: 'http://10.56.19.131', title: 'SPED 2.9', target: '_blank', icon: 'fa fa-file-lines' },
     { href: 'http://10.56.19.134/band/', title: 'SisBol', target: '_blank', icon: 'fa fa-book' },
     { href: '/s1/boletins', title: 'Boletins', icon: 'fa fa-magnifying-glass' },
     { href: 'http://drive.9bcomge.eb.mil.br/index.php/login', title: 'Drive', target: '_blank', icon: 'fa fa-cloud' },
@@ -24,26 +22,18 @@ export class LinksService {
   ];
 
   systems: Link[] = [
-    { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistema Interno', target: '_blank', icon: 'fa fa-id-card' },
     { href: 'http://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
     { href: 'http://10.56.19.134/band/', title: 'SisBol', target: '_blank', icon: 'fa fa-book' },
     { href: '/s1/boletins', title: 'Boletins', target: '_self', icon: 'fa fa-magnifying-glass' },
-    { href: 'https://cloud.9bcomge.eb.mil.br/index.php/login', title: 'Cloud', target: '_blank', icon: 'fa fa-cloud' },
     { href: 'http://drive.9bcomge.eb.mil.br/index.php/login', title: 'Drive', target: '_blank', icon: 'fa fa-cloud' },
-    { href: 'http://wekan.9bcomge.eb.mil.br', title: 'WeKan', target: '_blank', icon: 'fa fa-list' },
     { href: 'https://correio.9bcomge.eb.mil.br/', title: 'Zimbra', icon: 'fa fa-envelope', target: '_blank' },
     { href: 'https://sgd.eb.mil.br/pages/login.faces#app', title: 'SGD', target: '_blank', icon: 'fa fa-chart-line' },
-    { href: 'https://pdf.9bcomge.eb.mil.br/', title: 'PDF Editor', target: '_blank', icon: 'fa fa-file-pdf' },
   ];
 
   intranets: Link[] = [
     { href: 'http://intranet.cmo.eb.mil.br', title: 'CMO', target: '_blank', icon: '' },
     { href: 'http://intranet.9rm.eb.mil.br', title: '9ª RM', target: '_blank', icon: '' },
-    { href: 'http://intranet.badmapcmo.eb.mil.br', title: 'B Adm Ap/CMO', target: '_blank', icon: '' },
     { href: 'http://intranet.6cta.eb.mil.br', title: '6º CTA', target: '_blank', icon: '' },
-    { href: 'http://intranet.9bpe.eb.mil.br', title: '9º BPE', target: '_blank', icon: '' },
-    { href: 'http://www.hmilacg.eb.mil.br/', title: 'HMILACG', target: '_blank', icon: '' },
-    { href: 'http://www.cmcg.eb.mil.br/', title: 'CMCG', target: '_blank', icon: '' }
   ];
 
   usefulLinks: Link[] = [
