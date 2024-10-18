@@ -362,6 +362,168 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiAniversarianteAniversariante extends Schema.CollectionType {
+  collectionName: 'aniversariantes';
+  info: {
+    singularName: 'aniversariante';
+    pluralName: 'aniversariantes';
+    displayName: 'Aniversariantes';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nome: Attribute.String;
+    data_aniversario: Attribute.Date;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aniversariante.aniversariante',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aniversariante.aniversariante',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAvisoAviso extends Schema.CollectionType {
+  collectionName: 'avisos';
+  info: {
+    singularName: 'aviso';
+    pluralName: 'avisos';
+    displayName: 'Aviso';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mensagem: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aviso.aviso',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aviso.aviso',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGaleriaGaleria extends Schema.CollectionType {
+  collectionName: 'galerias';
+  info: {
+    singularName: 'galeria';
+    pluralName: 'galerias';
+    displayName: 'Carrosel';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    titulo: Attribute.String;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::galeria.galeria',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::galeria.galeria',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNoticiaNoticia extends Schema.CollectionType {
+  collectionName: 'noticias';
+  info: {
+    singularName: 'noticia';
+    pluralName: 'noticias';
+    displayName: 'Noticia';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titulo: Attribute.String;
+    subtitulo: Attribute.String;
+    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    content: Attribute.RichText;
+    fotos: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::noticia.noticia',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::noticia.noticia',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPopupPopup extends Schema.SingleType {
+  collectionName: 'popups';
+  info: {
+    singularName: 'popup';
+    pluralName: 'popups';
+    displayName: 'PopUp';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    popup: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    link: Attribute.String & Attribute.DefaultTo<'https://www.eb.mil.br'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::popup.popup',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::popup.popup',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -788,168 +950,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiAniversarianteAniversariante extends Schema.CollectionType {
-  collectionName: 'aniversariantes';
-  info: {
-    singularName: 'aniversariante';
-    pluralName: 'aniversariantes';
-    displayName: 'Aniversariantes';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    nome: Attribute.String;
-    data_aniversario: Attribute.Date;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::aniversariante.aniversariante',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::aniversariante.aniversariante',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiAvisoAviso extends Schema.CollectionType {
-  collectionName: 'avisos';
-  info: {
-    singularName: 'aviso';
-    pluralName: 'avisos';
-    displayName: 'Aviso';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    mensagem: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::aviso.aviso',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::aviso.aviso',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiGaleriaGaleria extends Schema.CollectionType {
-  collectionName: 'galerias';
-  info: {
-    singularName: 'galeria';
-    pluralName: 'galerias';
-    displayName: 'Carrosel';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    titulo: Attribute.String;
-    link: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::galeria.galeria',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::galeria.galeria',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiNoticiaNoticia extends Schema.CollectionType {
-  collectionName: 'noticias';
-  info: {
-    singularName: 'noticia';
-    pluralName: 'noticias';
-    displayName: 'Noticia';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    titulo: Attribute.String;
-    subtitulo: Attribute.String;
-    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    content: Attribute.RichText;
-    fotos: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::noticia.noticia',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::noticia.noticia',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPopupPopup extends Schema.SingleType {
-  collectionName: 'popups';
-  info: {
-    singularName: 'popup';
-    pluralName: 'popups';
-    displayName: 'PopUp';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    popup: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    link: Attribute.String & Attribute.DefaultTo<'https://www.eb.mil.br'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::popup.popup',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::popup.popup',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -960,6 +960,11 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::aniversariante.aniversariante': ApiAniversarianteAniversariante;
+      'api::aviso.aviso': ApiAvisoAviso;
+      'api::galeria.galeria': ApiGaleriaGaleria;
+      'api::noticia.noticia': ApiNoticiaNoticia;
+      'api::popup.popup': ApiPopupPopup;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -968,11 +973,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::aniversariante.aniversariante': ApiAniversarianteAniversariante;
-      'api::aviso.aviso': ApiAvisoAviso;
-      'api::galeria.galeria': ApiGaleriaGaleria;
-      'api::noticia.noticia': ApiNoticiaNoticia;
-      'api::popup.popup': ApiPopupPopup;
     }
   }
 }
