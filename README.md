@@ -140,3 +140,18 @@ npm run dev
 ### Servidor de assets configurado ✅
 
 Pronto, seu servidor de assets deverá estar configurado e sua intranet pronta para consumir, tanto o Strapi quanto o Assets.
+
+# Rodar Intranet Angular
+
+Para iniciar o servidor angular, basta instalar as dependências e rodar. Acesse a pasta /intranet-angular com `cd intranet-angular`:
+
+### Instalar dependências e rodar projeto
+
+```
+npm install
+npm start
+```
+
+### Intranet pronta e acessível em [http://localhost:4200](http://localhost:4200) ✅ Porém...
+
+Fique atento para algumas variáveis e endereços IP!
