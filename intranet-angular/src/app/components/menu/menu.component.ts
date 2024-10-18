@@ -58,29 +58,6 @@ export class BrMenuComponent implements AfterViewInit {
           route: 'institucional/missao'
         },
         {
-          iconClass: 'fa-link',
-          label: 'Diretriz de Comando',
-          route: 'http://10.56.19.133/arquivos/Institucional/Diretrizes-9BCOMGE.pdf',
-          external: true
-        },
-        {
-          iconClass: 'fa-link',
-          label: 'Diretriz CMO',
-          route: 'http://10.56.19.133/arquivos/Institucional/Diretriz_Cmt_CMO.pdf',
-          external: true
-        },
-        {
-          iconClass: 'fa-link',
-          label: 'Plano de gestão',
-          route: 'http://10.56.19.159//webdav/plano_de_gestao/Plano_de_Gest_o_9_B_Com_GE_2024-2.pdf',
-          external: true
-        },
-        //{
-        //  iconClass: 'fa-eye-slash',
-        //  label: 'Pesquisa de clima organizacional',
-        //  route: ''
-        //},
-        {
           iconClass: 'fa-map-pin',
           label: 'Endereço',
           route: 'institucional/endereco'

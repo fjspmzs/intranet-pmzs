@@ -177,13 +177,11 @@ export class LinksService {
   ];
 
   userHelp: Link[] = [
-    { href: 'https://ldap.9bcomge.eb.mil.br/resetsenha/', title: 'Trocar senha Sistemas Internos', target: '_blank', icon: 'fa fa-key' },
     { href: 'https://acesso.6cta.eb.mil.br/otp.html', title: 'Trocar senha VPN', target: '_blank', icon: 'fa fa-key' },
     { href: '/sti/chamado', title: 'Abrir chamado simplificado - STI', icon: 'fa fa-headset' },
     { href: 'http://docs.9bcomge.eb.mil.br/', title: 'Como acessar VPN', target: '_blank', icon: 'fa fa-question' },
     { href: 'http://docs.9bcomge.eb.mil.br/', title: 'Como acessar Internet', target: '_blank', icon: 'fa fa-question' },
     { href: 'http://intranet.dct.eb.mil.br/legislacao-tic', title: 'Legislação de TIC', target: '_blank', icon: 'fa fa-book' },
-    { href: 'https://docs.google.com/forms/d/e/1FAIpQLSeA_68qpFhRZbXk9Csh1FncU5KWn6pFsJs-5wXrWOCTDQaizg/viewform', title: 'Abrir chamado P.O', target: '_blank', icon: 'fa fa-hammer' },
   ];
 
   constructor() { }
