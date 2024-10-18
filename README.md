@@ -92,3 +92,16 @@ Será solicitado a criação da conta de administrador
 
 ![image](https://github.com/user-attachments/assets/caf7b2a9-2196-4f24-ba19-5fdde3a4f132)
 
+Você poderá acessar o strapi e observar as estruturas de conteúdo:
+- Content Manager (para criar as publicações)
+- Content-type Builder (para criar estruturas de conteúdo)
+
+Principais tipos de conteúdo:
+
+- Aniversariantes
+- aviso
+- carrosel
+- noticia
+- popup
+
+
