@@ -38,4 +38,6 @@ Devo começar dizendo sobre os recursos que serão possíveis subir com esse rep
 # Começando
 
 clonar repositório
-`git clone https://github.com/nixoletas/intranet-govbr`
+```
+git clone https://github.com/nixoletas/intranet-govbr
+```
