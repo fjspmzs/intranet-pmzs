@@ -89,3 +89,6 @@ npm run develop
 Após isso, poderá acessar seu servidor em: [http://localhost:8080](http://localhost:8080)
 
 Será solicitado a criação da conta de administrador
+
+![image](https://github.com/user-attachments/assets/caf7b2a9-2196-4f24-ba19-5fdde3a4f132)
+
