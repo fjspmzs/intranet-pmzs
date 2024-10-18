@@ -78,3 +78,14 @@ JWT_SECRET=tobemodified
 
 >no arquivo de exemplo, o HOST está setado para ser o `localhost`, mas no "valendo" você deve alterar para o IP do seu servidor.
 **A porta recomendada é a 80** para não haver problemas de Firewall dos CTA's e VPN.
+
+Após isso pode instalar as dependências e iniciar o servidor
+
+```
+npm install
+npm run develop
+```
+
+Após isso, poderá acessar seu servidor em: [http://localhost:8080](http://localhost:8080)
+
+Será solicitado a criação da conta de administrador
