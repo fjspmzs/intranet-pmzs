@@ -255,6 +255,10 @@ export const environment = {
 }
 ```
 
-## Verifique mais a fundo como alterar o Angular
+## Entenda a estrutura do Intranet Angular
 
 [ANGULAR.md](./ANGULAR.md)
+
+## Como criar Bot Telegram para abertura de chamados
+
+[TELEGRAM_BOT.md](./TELEGRAM_BOT.md)
