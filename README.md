@@ -11,6 +11,8 @@ Com Angular & Strapi. Tutorial completo ⭐
 
 Olá pessoal! Sou o Tenente Daisuke. Nesse repositório vou explicar como subir a sua nova intranet de maneira simples e descomplicada. 
 
+Primeiro irei mostrar como subir seu modelo de desenvolvimento, depois o de produção! Caso já tenha passado por aqui, vá direto para subir para [PRODUÇÃO](./PROD.md)
+
 Devo começar dizendo sobre os recursos que serão possíveis subir com esse repositório, pois muitas OM's usam maneiras diferentes de disponibilizar boletins, escala de serviço, aba institucional, notícia, links úteis etc.
 
 - Header personalizável ✅
