@@ -849,29 +849,6 @@ export interface ApiAvisoAviso extends Schema.CollectionType {
   };
 }
 
-export interface ApiFaqFaq extends Schema.CollectionType {
-  collectionName: 'faqs';
-  info: {
-    singularName: 'faq';
-    pluralName: 'faqs';
-    displayName: 'faq';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    titulo: Attribute.String;
-    conteudo: Attribute.RichText;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiGaleriaGaleria extends Schema.CollectionType {
   collectionName: 'galerias';
   info: {
@@ -940,60 +917,6 @@ export interface ApiNoticiaNoticia extends Schema.CollectionType {
   };
 }
 
-export interface ApiOperacaoOperacao extends Schema.CollectionType {
-  collectionName: 'operacoes';
-  info: {
-    singularName: 'operacao';
-    pluralName: 'operacoes';
-    displayName: 'operacoes';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    titulo: Attribute.String;
-    conteudo: Attribute.RichText;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::operacao.operacao',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::operacao.operacao',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPopPop extends Schema.CollectionType {
-  collectionName: 'pops';
-  info: {
-    singularName: 'pop';
-    pluralName: 'pops';
-    displayName: 'pop';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    titulo: Attribute.String;
-    conteudo: Attribute.RichText;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::pop.pop', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::pop.pop', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiPopupPopup extends Schema.SingleType {
   collectionName: 'popups';
   info: {
@@ -1046,11 +969,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::aniversariante.aniversariante': ApiAniversarianteAniversariante;
       'api::aviso.aviso': ApiAvisoAviso;
-      'api::faq.faq': ApiFaqFaq;
       'api::galeria.galeria': ApiGaleriaGaleria;
       'api::noticia.noticia': ApiNoticiaNoticia;
-      'api::operacao.operacao': ApiOperacaoOperacao;
-      'api::pop.pop': ApiPopPop;
       'api::popup.popup': ApiPopupPopup;
     }
   }
