@@ -186,10 +186,10 @@ PRODUÇÃO -> `environment.prod.ts` | DESENVOLVIMENTO -> `environment.ts`
 
 Tente manter as duas sempre cópias uma da outra para evitar confusão. Mas o ideal é ter o desenvolvimento na sua máquina local e quando seu código estiver legal, usar produção. O Angular usa automaticamente cada uma das variáveis conforme o método de rodar o projeto.
 
-Servidor | Desenvolvimento         | Produção          |
-|-------------------------|-------------------|
-Assets | localhost:3000 | IP do servidor de assets |
-Angular | localhost:4200 | IP do servidor Angular |
-Strapi | localhost:1337 | IP do servidor Strapi |
+| Servidor | Desenvolvimento     | Produção               |
+|----------|---------------------|------------------------|
+| Assets   | localhost:3000       | IP do servidor de assets : 80 |
+| Angular  | localhost:4200       | IP do servidor Angular : 80 |
+| Strapi   | localhost:1337       | IP do servidor Strapi : 80 |
 
-Como dito anteriormente, tente sempre rodar os 3 servidores em máquinas separadas com seu próprio IP e na porta 80.
+Como dito anteriormente, tente sempre rodar os 3 servidores em máquinas separadas com seu próprio IP e na porta 80 para evitar problemas de Firewall e VPN.
