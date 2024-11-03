@@ -1,3 +1,9 @@
-## **MISSÃO DO 9º BATALHÃO DE COMUNICAÇÕES**
+## **MISSÃO DA PMZS**
 ----
-Instalar, explorar e manter os sistemas de comunicações, de guerra eletrônica e de tecnologia da informação para atividades de C2 em apoio ao emprego operativo do CMO.
+- Proporcionar a vertente humana do Exército Brasileiro, em sua área de responsabilidade, as melhores condições para o desenvolvimento pessoal e para atingir elevados níveis de bem-estar.
+
+- Administrar, conservar e reparar os Próprios Nacionais Residenciais sob a responsabilidade da Prefeitura Militar da Zona Sul, prezando pela qualidade no atendimento e respeito às normas, regulamentos e legislações aplicáveis a missão da PMZS.
+
+## **Missão Síntese**
+
+- Administrar, conservar e reparar os Próprios Nacionais Residenciais sob a responsabilidade da Prefeitura Militar da Zona Sul.

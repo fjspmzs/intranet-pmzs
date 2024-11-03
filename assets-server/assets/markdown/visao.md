@@ -1,3 +1,9 @@
 ## **Visão de futuro**
 
-  Até 2023, após a finalização do recebimento e ocupação das novas instalações, da ativação e preenchimento de todos os cargos, do recebimento de material previsto em QDM e no Plano de Equipamentos Específicos, da manutenção de uma capacitação contínua do pessoal, gerar as capacidades previstas para a conclusão da implantação do 9º Batalhão de Comunicações e Guerra Eletrônica.
+**Visão de futuro da Organização Militar**
+
+- Ser reconhecida pelos Permissionários por um elevado nível de qualidade e efetividade na administração, conservação e manutenção dos Próprios Nacionais Residenciais, utilizando os Recursos Públicos com eficiência.
+
+Detalhamento da visão de futuro da Organização Militar
+
+- Ser reconhecida no âmbito do Comando Militar de Área pelo elevado nível na administração dos PNRs sob sua responsabilidade, profissionalismo e pró-atividade de seus quadros

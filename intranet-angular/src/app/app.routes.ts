@@ -1,5 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { ProfissionalComponent } from './pages/secoes/secmnt/profissional/profissional.component';
+import { PessoalComponent } from './pages/secoes/s1/pessoal/pessoal.component';
 import { ServicoPageComponent } from './pages/secoes/s1/servico/servico.component';
 import { RamaisComponent } from './pages/ramais/ramais.component';
 import { AdjuntoComponent } from './pages/institucional/adjunto/adjunto.component';
@@ -75,6 +77,7 @@ export const routes: Routes = [
       path: 's1',
       children: [
         { path: '', component: S1PageComponent },
+        { path: 'pessoal', component: PessoalComponent },
         { path: 'boletins', component: BoletinsComponent },
         { path: 'avisos', component: AvisosComponent },
         { path: 'servico', component: ServicoPageComponent },
@@ -125,6 +128,12 @@ export const routes: Routes = [
       children: [
         { path: 'arquivos', component: ArquivosSalcComponent },
         { path: 'pregoes', component: PregoesSalcComponent },
+      ]
+    },
+    {
+      path: 'secmnt',
+      children: [
+        { path: 'profissional', component: ProfissionalComponent },
       ]
     },
     {

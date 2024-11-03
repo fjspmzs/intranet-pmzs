@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profissionals",
+  "info": {
+    "singularName": "profissional",
+    "pluralName": "profissionals",
+    "displayName": "Profissional",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tiposvId": {
+      "type": "integer"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "primeironome": {
+      "type": "string"
+    },
+    "fotodoesp": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "detalhes": {
+      "type": "text"
+    },
+    "data_nascimento": {
+      "type": "date"
+    },
+    "vilaId": {
+      "type": "integer"
+    },
+    "telefonecelular": {
+      "type": "string"
+    },
+    "especialista": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::especialista.especialista",
+      "inversedBy": "profissionals"
+    }
+  }
+}

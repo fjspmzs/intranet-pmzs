@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alteracoes",
+  "info": {
+    "singularName": "alteracao",
+    "pluralName": "alteracoes",
+    "displayName": "Alteraçoes"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titles": {
+      "type": "string"
+    },
+    "alteracoespdf": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -17,11 +17,11 @@ export const environment = {
   POP_API: 'http://localhost:1337/api/pops',
   NEWS_API: 'http://localhost:1337/api/noticias?populate=*',
   SINGLE_NEWS: 'http://localhost:1337/api/noticias',
-  NIVER_API: 'http://localhost:1337/api/aniversariantes',
+  NIVER_API: 'http://localhost:1337/api/aniversariantes?populate=*&pagination[limit]=-1',
   AVISOS_API: 'http://localhost:1337/api/avisos',
   GALERIA_API: 'http://localhost:1337/api/galerias?populate=*',
 
-  INTRANET: 'http://10.56.19.133',
+  INTRANET: 'http://localhost',
   REPOSITORIO: 'http://10.56.19.159/webdav',
 
   CARGA_UPLOAD: 'http://10.56.19.152:5000/upload'

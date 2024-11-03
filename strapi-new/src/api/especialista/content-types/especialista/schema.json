@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "especialistas",
+  "info": {
+    "singularName": "especialista",
+    "pluralName": "especialistas",
+    "displayName": "Especialista",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "profissionals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::profissional.profissional",
+      "mappedBy": "especialista"
+    },
+    "especialidade": {
+      "type": "string"
+    },
+    "custo_mensal": {
+      "type": "decimal"
+    }
+  }
+}

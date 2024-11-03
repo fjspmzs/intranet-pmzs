@@ -4,7 +4,8 @@
   "info": {
     "singularName": "aniversariante",
     "pluralName": "aniversariantes",
-    "displayName": "Aniversariantes"
+    "displayName": "Aniversariantes",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,34 @@
     },
     "data_aniversario": {
       "type": "date"
+    },
+    "pgrad": {
+      "type": "string"
+    },
+    "firma": {
+      "type": "string"
+    },
+    "fotodoani": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "email": {
+      "type": "string"
+    },
+    "nomedeguerra": {
+      "type": "string",
+      "maxLength": 75
+    },
+    "fon_celular": {
+      "type": "string",
+      "maxLength": 15
+    },
+    "localtrabalho": {
+      "type": "string"
     }
   }
 }

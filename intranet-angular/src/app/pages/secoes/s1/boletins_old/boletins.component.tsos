@@ -1,0 +1,163 @@
+import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../../../environments/environment';
+
+interface Boletin {
+    title: string;
+    date: Date;
+    url: string;
+}
+
+@Component({
+  selector: 'br-boletin',
+  templateUrl: './boletins.component.html'
+})
+export class BoletinsComponent {
+  iframeSrc: any;
+  boletins: Boletin[] = [];
+  organizedBoletins: { [year: string]: { [month: string]: Boletin[] } } = {};
+  htmlContent: string = '';
+
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
+    const url = `${environment.INTRANET}/arquivos/s1/boletins/`;
+    this.loadBoletins(url);
+  }
+
+  loadBoletins(url: string) {
+    this.http.get(url, { responseType: 'text' }).subscribe(html => {
+      this.extractBoletins(html);
+      this.organizeBoletins();
+      this.generateHtmlContent();
+    }, error => {
+      console.error('Erro ao carregar os boletins:', error);
+    });
+  }
+
+  extractBoletins(html: string) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const boletinElements = doc.querySelectorAll('li > a');
+
+    boletinElements.forEach(element => {
+      const title = element.textContent || '';
+      const href = element.getAttribute('href') || '';
+      const dateMatch = title.match(/^(\d{4})-(\d{2})-(\d{2})/);
+
+      if (dateMatch) {
+        const date = new Date(`${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`);
+        const formattedTitle = this.formatBoletinTitle(title);
+        const url = `${environment.INTRANET}/arquivos/s1/boletins/${href}`;
+
+        this.boletins.push({ title: formattedTitle, date, url });
+      }
+    });
+
+    // Opcional: Ordenar os boletins por data (mais recentes primeiro)
+    this.boletins.sort((a, b) => b.date.getTime() - a.date.getTime());
+  }
+
+  formatBoletinTitle(title: string): string {
+    const dateMatch = title.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    const numberMatch = title.match(/_O_(\d+)_/);
+
+    if (dateMatch && numberMatch) {
+      const dia = dateMatch[3].startsWith('0') ? dateMatch[3].substring(1) : dateMatch[3];
+      const mes = dateMatch[2].startsWith('0') ? dateMatch[2].substring(1) : dateMatch[2];
+      const ano = dateMatch[1];
+      return `Data: ${dia}/${mes}/${ano}, Boletim Nº: ${numberMatch[1]}`;
+    }
+    return title;
+  }
+
+  organizeBoletins() {
+    this.boletins.forEach(boletin => {
+      const year = boletin.date.getFullYear().toString();
+      const monthNumber = boletin.date.getMonth() + 1; // Meses de 1 a 12
+      const monthName = this.getMonthName(boletin.date.getMonth());
+
+      if (!this.organizedBoletins[year]) {
+        this.organizedBoletins[year] = {};
+      }
+
+      if (!this.organizedBoletins[year][monthName]) {
+        this.organizedBoletins[year][monthName] = [];
+      }
+
+      this.organizedBoletins[year][monthName].push(boletin);
+    });
+  }
+
+  getMonthName(monthIndex: number): string {
+    const monthNames = [
+      'Janeiro', 'Fevereiro', 'Março',
+      'Abril', 'Maio', 'Junho',
+      'Julho', 'Agosto', 'Setembro',
+      'Outubro', 'Novembro', 'Dezembro'
+    ];
+    return monthNames[monthIndex];
+  }
+
+  generateHtmlContent() {
+    this.htmlContent = `
+      <html>
+        <head>
+          <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            h1 { text-align: center; }
+            h2 { color: #2c3e50; border-bottom: 2px solid #bdc3c7; padding-bottom: 5px; }
+            h3 { color: #34495e; margin-left: 20px; }
+            ul { list-style-type: none; padding-left: 40px; }
+            li { margin-bottom: 8px; }
+            a { text-decoration: none; color: #2980b9; }
+            a:hover { text-decoration: underline; }
+          </style>
+        </head>
+        <body>
+          <h1>Boletins Internos</h1>
+    `;
+
+    // Ordenar os anos de forma decrescente (mais recente primeiro)
+    const sortedYears = Object.keys(this.organizedBoletins).sort((a, b) => parseInt(b) - parseInt(a));
+
+    sortedYears.forEach(year => {
+      this.htmlContent += `<h2>${year}</h2>`;
+
+      // Ordenar os meses de forma decrescente (mais recente primeiro)
+      const sortedMonths = Object.keys(this.organizedBoletins[year]).sort((a, b) => {
+        return this.monthIndex(b) - this.monthIndex(a);
+      });
+
+      sortedMonths.forEach(month => {
+        this.htmlContent += `<h3>${month}</h3><ul>`;
+        this.organizedBoletins[year][month].forEach(boletin => {
+          this.htmlContent += `
+            <li>
+              <a href="${boletin.url}" target="_blank">${boletin.title}</a>
+            </li>
+          `;
+        });
+        this.htmlContent += `</ul>`;
+      });
+    });
+
+    this.htmlContent += `
+        </body>
+      </html>
+    `;
+
+    // Cria um Blob e gera um URL seguro para o iframe
+    const blob = new Blob([this.htmlContent], { type: 'text/html' });
+    this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(blob));
+  }
+
+  monthIndex(monthName: string): number {
+    const monthNames = [
+      'Janeiro', 'Fevereiro', 'Março',
+      'Abril', 'Maio', 'Junho',
+      'Julho', 'Agosto', 'Setembro',
+      'Outubro', 'Novembro', 'Dezembro'
+    ];
+    return monthNames.indexOf(monthName);
+  }
+}

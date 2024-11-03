@@ -21,7 +21,7 @@ export class PopComponent {
   ngAfterViewInit(): void {
     this.fetchData();
   }
-  
+
   fetchData(): void {
     this.popService.getPop().subscribe({
       next: (response) => {
@@ -36,7 +36,7 @@ export class PopComponent {
 
     // Configurando o formatador para o fuso horário "America/Campo_Grande"
     const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
-      timeZone: 'America/Campo_Grande',
+      timeZone: 'America/Sao_Paulo',
       day: '2-digit',
       month: '2-digit', // Formato abreviado (ex: "set")
       year: '2-digit',

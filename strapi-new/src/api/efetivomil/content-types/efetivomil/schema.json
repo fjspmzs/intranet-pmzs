@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "efetivomils",
+  "info": {
+    "singularName": "efetivomil",
+    "pluralName": "efetivomils",
+    "displayName": "Efetivomil"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pggrad": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "nomeguerra": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "fone_celular": {
+      "type": "string"
+    },
+    "secao": {
+      "type": "string"
+    },
+    "fotodomil": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

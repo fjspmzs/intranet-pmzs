@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router'
   styleUrl: './header.component.scss'
 })
 export class BrHeaderComponent {
-  public title = 'Nome da sua OM (componente header)'
+  public title = 'Prefeitura Militar da Zona Sul'
   public subtitle = 'Denominação Histórica'
   public signature: string = 'Ministério da Defesa'
   instance: any // Instância do componente angular
@@ -24,32 +24,32 @@ export class BrHeaderComponent {
   }
 
   public image = {
-    src: `${environment.ASSETS_PICS}/logo9bcom2.png`,
-    alt: '9º B Com GE',
+    src: `${environment.ASSETS_PICS}/iconpmzs.png`,
+    alt: 'PMZS',
   }
 
   public links: any[] = [
     {
-      href: 'http://intranet.cmo.eb.mil.br',
-      name: 'CMO',
+      href: 'http://intranet.cml.eb.mil.br',
+      name: 'CML',
       target: '_blank',
-      title: 'CMO',
+      title: 'CML',
     },
     {
-      href: 'http://intranet.9rm.eb.mil.br',
-      name: '9ª RM',
+      href: 'http://intranet.1rm.eb.mil.br',
+      name: '1ª RM',
       target: '_blank',
-      title: '9RM',
+      title: '1RM',
     },
     {
       href: 'https://10.56.67.186:1003/logout?',
-      name: 'Login 6º CTA',
+      name: 'Login 2º CTA',
       icon: 'fa-brands fa-safari',
       target: '_blank',
       title: 'logincta',
     },
     {
-      href: 'https://marcacao-consulta.eb.mil.br/#/login',
+      href: 'https://suade.1rm.eb.mil.br/#/login',
       icon: 'fa-solid fa-notes-medical',
       name: 'Marcação de consulta',
       target: '_blank',

@@ -362,168 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiAniversarianteAniversariante extends Schema.CollectionType {
-  collectionName: 'aniversariantes';
-  info: {
-    singularName: 'aniversariante';
-    pluralName: 'aniversariantes';
-    displayName: 'Aniversariantes';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    nome: Attribute.String;
-    data_aniversario: Attribute.Date;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::aniversariante.aniversariante',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::aniversariante.aniversariante',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiAvisoAviso extends Schema.CollectionType {
-  collectionName: 'avisos';
-  info: {
-    singularName: 'aviso';
-    pluralName: 'avisos';
-    displayName: 'Aviso';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    mensagem: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::aviso.aviso',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::aviso.aviso',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiGaleriaGaleria extends Schema.CollectionType {
-  collectionName: 'galerias';
-  info: {
-    singularName: 'galeria';
-    pluralName: 'galerias';
-    displayName: 'Carrosel';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    titulo: Attribute.String;
-    link: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::galeria.galeria',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::galeria.galeria',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiNoticiaNoticia extends Schema.CollectionType {
-  collectionName: 'noticias';
-  info: {
-    singularName: 'noticia';
-    pluralName: 'noticias';
-    displayName: 'Noticia';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    titulo: Attribute.String;
-    subtitulo: Attribute.String;
-    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    content: Attribute.RichText;
-    fotos: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::noticia.noticia',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::noticia.noticia',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPopupPopup extends Schema.SingleType {
-  collectionName: 'popups';
-  info: {
-    singularName: 'popup';
-    pluralName: 'popups';
-    displayName: 'PopUp';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    popup: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    link: Attribute.String & Attribute.DefaultTo<'https://www.eb.mil.br'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::popup.popup',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::popup.popup',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -950,6 +788,392 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAditamentoAditamento extends Schema.CollectionType {
+  collectionName: 'aditamentos';
+  info: {
+    singularName: 'aditamento';
+    pluralName: 'aditamentos';
+    displayName: 'Aditamento';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titles: Attribute.String;
+    arquivopdf: Attribute.Media<'files', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aditamento.aditamento',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aditamento.aditamento',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAlteracaoAlteracao extends Schema.CollectionType {
+  collectionName: 'alteracoes';
+  info: {
+    singularName: 'alteracao';
+    pluralName: 'alteracoes';
+    displayName: 'Altera\u00E7oes';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titles: Attribute.String;
+    alteracoespdf: Attribute.Media<'files', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::alteracao.alteracao',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::alteracao.alteracao',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAniversarianteAniversariante extends Schema.CollectionType {
+  collectionName: 'aniversariantes';
+  info: {
+    singularName: 'aniversariante';
+    pluralName: 'aniversariantes';
+    displayName: 'Aniversariantes';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nome: Attribute.String;
+    data_aniversario: Attribute.Date;
+    pgrad: Attribute.String;
+    firma: Attribute.String;
+    fotodoani: Attribute.Media<'images'>;
+    email: Attribute.String;
+    nomedeguerra: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 75;
+      }>;
+    fon_celular: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 15;
+      }>;
+    localtrabalho: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aniversariante.aniversariante',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aniversariante.aniversariante',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAvisoAviso extends Schema.CollectionType {
+  collectionName: 'avisos';
+  info: {
+    singularName: 'aviso';
+    pluralName: 'avisos';
+    displayName: 'Aviso';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mensagem: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aviso.aviso',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aviso.aviso',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiBoletimBoletim extends Schema.CollectionType {
+  collectionName: 'boletins';
+  info: {
+    singularName: 'boletim';
+    pluralName: 'boletins';
+    displayName: 'Boletim';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    bolInterno: Attribute.Media<'files', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::boletim.boletim',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::boletim.boletim',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiEfetivomilEfetivomil extends Schema.CollectionType {
+  collectionName: 'efetivomils';
+  info: {
+    singularName: 'efetivomil';
+    pluralName: 'efetivomils';
+    displayName: 'Efetivomil';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pggrad: Attribute.String;
+    nome: Attribute.String;
+    nomeguerra: Attribute.String;
+    email: Attribute.Email;
+    fone_celular: Attribute.String;
+    secao: Attribute.String;
+    fotodomil: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::efetivomil.efetivomil',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::efetivomil.efetivomil',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiEspecialistaEspecialista extends Schema.CollectionType {
+  collectionName: 'especialistas';
+  info: {
+    singularName: 'especialista';
+    pluralName: 'especialistas';
+    displayName: 'Especialista';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    profissionals: Attribute.Relation<
+      'api::especialista.especialista',
+      'oneToMany',
+      'api::profissional.profissional'
+    >;
+    especialidade: Attribute.String;
+    custo_mensal: Attribute.Decimal;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::especialista.especialista',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::especialista.especialista',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGaleriaGaleria extends Schema.CollectionType {
+  collectionName: 'galerias';
+  info: {
+    singularName: 'galeria';
+    pluralName: 'galerias';
+    displayName: 'Carrosel';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    titulo: Attribute.String;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::galeria.galeria',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::galeria.galeria',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNoticiaNoticia extends Schema.CollectionType {
+  collectionName: 'noticias';
+  info: {
+    singularName: 'noticia';
+    pluralName: 'noticias';
+    displayName: 'Noticia';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    titulo: Attribute.String;
+    subtitulo: Attribute.String;
+    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    content: Attribute.RichText;
+    fotos: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::noticia.noticia',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::noticia.noticia',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPopupPopup extends Schema.SingleType {
+  collectionName: 'popups';
+  info: {
+    singularName: 'popup';
+    pluralName: 'popups';
+    displayName: 'PopUp';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    popup: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    link: Attribute.String & Attribute.DefaultTo<'https://www.eb.mil.br'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::popup.popup',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::popup.popup',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProfissionalProfissional extends Schema.CollectionType {
+  collectionName: 'profissionals';
+  info: {
+    singularName: 'profissional';
+    pluralName: 'profissionals';
+    displayName: 'Profissional';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tiposvId: Attribute.Integer;
+    nome: Attribute.String;
+    primeironome: Attribute.String;
+    fotodoesp: Attribute.Media<'images'>;
+    email: Attribute.Email & Attribute.Unique;
+    detalhes: Attribute.Text;
+    data_nascimento: Attribute.Date;
+    vilaId: Attribute.Integer;
+    telefonecelular: Attribute.String;
+    especialista: Attribute.Relation<
+      'api::profissional.profissional',
+      'manyToOne',
+      'api::especialista.especialista'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::profissional.profissional',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::profissional.profissional',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -960,11 +1184,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::aniversariante.aniversariante': ApiAniversarianteAniversariante;
-      'api::aviso.aviso': ApiAvisoAviso;
-      'api::galeria.galeria': ApiGaleriaGaleria;
-      'api::noticia.noticia': ApiNoticiaNoticia;
-      'api::popup.popup': ApiPopupPopup;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -973,6 +1192,17 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::aditamento.aditamento': ApiAditamentoAditamento;
+      'api::alteracao.alteracao': ApiAlteracaoAlteracao;
+      'api::aniversariante.aniversariante': ApiAniversarianteAniversariante;
+      'api::aviso.aviso': ApiAvisoAviso;
+      'api::boletim.boletim': ApiBoletimBoletim;
+      'api::efetivomil.efetivomil': ApiEfetivomilEfetivomil;
+      'api::especialista.especialista': ApiEspecialistaEspecialista;
+      'api::galeria.galeria': ApiGaleriaGaleria;
+      'api::noticia.noticia': ApiNoticiaNoticia;
+      'api::popup.popup': ApiPopupPopup;
+      'api::profissional.profissional': ApiProfissionalProfissional;
     }
   }
 }

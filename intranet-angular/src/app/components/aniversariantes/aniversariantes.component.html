@@ -1,9 +1,33 @@
 <div *ngIf="data.length > 0">
   <h2 class="tile-header">Aniversariantes do mês de {{ currentMonth }}</h2>
-  <div class="text-center" *ngFor="let item of data">
-    <p>{{ item.attributes['nome'] }} - Dia {{ (item.attributes['data_aniversario']) | date: 'd' }} <span *ngIf="isBirthdayToday(item.attributes['data_aniversario'])">🎂 Dê os parabéns!</span></p>
+  <div *ngFor="let item of data" class="d-flex align-items-center mb-2">
+    <img *ngIf="item.attributes.fotodoani?.data"
+      [src]="item.attributes.fotodoani.data.attributes.url"
+      alt="{{item.attributes['pgrad']}}"
+      class="img-thumbnail"
+      (click)="zoomImage(item.attributes.fotodoani.data.attributes.url)"
+      style="width: 50px; height: 50px; cursor: pointer;"
+    />
+    <p class="ml-2 mb-0">
+      {{ item.attributes['pgrad'] }} {{ item.attributes['nomedeguerra'] }} - Dia {{ (item.attributes['data_aniversario']) | date: 'd' }}
+      <span *ngIf="isBirthdayToday(item.attributes['data_aniversario'])">🎂 Dê os parabéns!</span>
+    </p>
   </div>
 </div>
 <div *ngIf="data.length === 0">
   <h2 class="tile-header">Nenhum aniversariante este mês</h2>
+</div>
+
+<!-- Modal HTML -->
+<div id="zoom-Modal" class="br-modal" tabindex="-1" style="display: none;">
+  <div class="br-modal-dialog" >
+    <div class="br-modal-content">
+      <div class="br-modal-body">
+        <!-- A imagem será inserida dinamicamente via TypeScript -->
+      </div>
+      <div class="br-modal-footer">
+        <button type="button" class="br-button secondary" onclick="this.closest('.br-modal').style.display='none';">Fechar</button>
+      </div>
+    </div>
+  </div>
 </div>

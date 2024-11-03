@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Adiciona sombra ao contêiner para destacar do fundo */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.col-md-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 5px;
+}
+
+.escala {
+  margin-top: 20px;
+  border: none;
+}

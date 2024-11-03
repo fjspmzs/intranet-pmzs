@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, signal, ViewChild } from '@angular/core';
-import { AniversariantesService } from '../aniversariantes/aniversariantes.service';
+import { AniversariantesService } from '../aniversariantes/services/aniversariantes.service';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import BRModal from '@govbr-ds/core/dist/components/modal/modal';

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boletins",
+  "info": {
+    "singularName": "boletim",
+    "pluralName": "boletins",
+    "displayName": "Boletim"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bolInterno": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
